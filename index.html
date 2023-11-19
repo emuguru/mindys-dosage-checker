@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mindy's HomeWork Helper - Safe Dosage Checker</title>
+	<meta name="author" content="Wil Bowen">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+<h1>Mindy's HomeWork Checker</h1>
+
+	<input type="button" id="btn_sample" name="sampleButton" value="Sample Problem">
+	<input type="button" id="btn_check" name="checkButton" value="Check">
+	<input type="button" id="btn_reset" name="resetButton" value="Reset">
+
+	<br><br><br>
+
+<h3>Patient Information</h3>
+	<label for="weightRaw">Weight :</label>
+	<input type="text" id="weightRaw" name="weightRaw" required />
+	<select name="weightUnit" id="weightUnit">
+		<option value="0">Select Unit</option>
+		<option value="lb" selected>Pounds (lb)</option>
+		<option value="kg">KiloGrams (kg)</option>
+	</select> 
+
+	<br><br><br>
+
+<h3>Medication Order Information</h3>
+	<label for="orderedAmount">Ordered Medication Amount: </label>
+	<input type="text" id="orderedAmount" name="orderedAmount">
+	<select name="orderedUnit" id="orderedUnit">
+		<option value="0">Select Unit</option>
+		<option value="1000">Grams (g)</option>
+		<option value="1" selected>MilliGrams (mg)</option>
+		<option value=".001">MicroGrams (mcg)</option>
+	</select>
+
+	<select name="orderedFrequency" id="orderedFrequency">
+		<option value="0">Select Frequency</option>
+		<option value="2.0000">Per Dose: Two times a day (BID / q12h)</option>
+		<option value="3.0000">Per Dose: Three times a day (TID / q8h)</option>
+		<option value="4.0000">Per Dose: Four times a day (QID / q6h)</option>
+		<option value="6.0000">Per Dose: Six times a day (q4h)</option>
+		<option value="1.0000">Per Day: 1 Single Dose</option>
+		<option value="0.5000">Per Day: 2 Equal Doses (BID / q12h)</option>
+		<option value="0.3333">Per Day: 3 Equal Doses (TID / q8h)</option>
+		<option value="0.2500">Per Day: 4 Equal Doses (QID / q6h)</option>
+		<option value="0.1666">Per Day: 6 Equal Doses (q4h)</option>
+	</select>
+
+	<br><br><br>
+
+<h3>Medication Safe Dosage Information</h3>
+	<label for="safeDosageMin">Safe Dosage: </label>
+	<input type="text" id="safeDosageMin" name="safeDosageMin">
+	<label for="safeDosageMax">To: </label>
+	<input type="text" id="safeDosageMax" name="safeDosageMax">
+
+	<select name="safeDosageUnit" id="safeDosageUnit">
+		<option value="0">Select Unit</option>
+		<option value="1000">Grams (g)</option>
+		<option value="1" selected>MilliGrams (mg)</option>
+		<option value=".001">MicroGrams (mcg)</option>
+	</select> / kg
+
+	<select name="safeDosageFrequency" id="safeDosageFrequency">
+		<option value="0">Select Frequency</option>
+		<option value="2.0000">Per Dose: Two times a day (BID / q12h)</option>
+		<option value="3.0000">Per Dose: Three times a day (TID / q8h)</option>
+		<option value="4.0000">Per Dose: Four times a day (QID / q6h)</option>
+		<option value="6.0000">Per Dose: Six times a day (q4h)</option>
+		<option value="1.0000">Per Day: 1 Single Dose</option>
+		<option value="0.5000">Per Day: 2 Equal Doses (BID / q12h)</option>
+		<option value="0.3333">Per Day: 3 Equal Doses (TID / q8h)</option>
+		<option value="0.2500">Per Day: 4 Equal Doses (QID / q6h)</option>
+		<option value="0.1666">Per Day: 6 Equal Doses (q4h)</option>
+	</select>
+
+	<br><br><br>
+	<div id="statusLog"><br><br><br></div>
+	<br><br><br>
+
+
+</body>
+</html>
